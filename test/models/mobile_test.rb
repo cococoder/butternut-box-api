@@ -20,6 +20,15 @@ class MobileTest < ActiveSupport::TestCase
     assert_not_nil(mobile)
   end
 
+  test "will not create +4471234567890" do
+
+    assert_raise ActiveRecord::RecordInvalid do
+     mobile= Mobile.create! number: "+4471234567890"
+    end
+    
+  end
+
+
 
 
 end
