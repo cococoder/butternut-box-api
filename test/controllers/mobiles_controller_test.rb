@@ -2,7 +2,9 @@ require 'test_helper'
 
 class MobilesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @mobile = mobiles(:one)
+    @mobile = mobiles(:valid_uk_numner)
+    new_numer =  SecureRandom.random_number(10**9).to_s.rjust(9, '0')
+    @mobile.number = "07#{new_numer}" 
   end
 
   test "should get index" do

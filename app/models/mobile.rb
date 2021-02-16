@@ -1,5 +1,5 @@
 class Mobile < ApplicationRecord
-  validates :number,uniqueness: true, presence: true
+  #validates :number,uniqueness: true, presence: true
   validate :validate_mobile_number
   def validate_mobile_number
     unless /^(44|\+44|0)7\d{9}$/.match(number)

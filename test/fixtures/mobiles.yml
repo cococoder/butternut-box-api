@@ -1,7 +1,4 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  number: MyString
-
-two:
-  number: MyString
+valid_uk_numner:
+  number: 447123456790
